@@ -30,7 +30,7 @@
                                                 <figure>
                                                     <div class="snipcart-item block" >
                                                         <div class="snipcart-thumb">
-                                                            <a href="/product/detail/{{$product->id}}"><img title=" " alt=" " src="/resources/upload/{{$product->image}}" /></a>
+                                                            <a href="/product/detail/{{$product->id}}"><img title=" " alt=" " src="{{asset('/resource/upload/'.$product->image)}}" /></a>
                                                             <p>{{$product->name}}</p>
 
                                                             <h4>{{$product->pricesale}}<span>{{$product->price}}</span></h4>
