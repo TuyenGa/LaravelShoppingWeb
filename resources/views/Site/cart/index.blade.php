@@ -18,7 +18,7 @@
                 <table class="timetable_sub">
                     <thead>
                     <tr>
-                        <th>SL No.</th>
+
                         <th>Product</th>
                         <th>Quality</th>
                         <th>Product Name</th>
@@ -29,7 +29,7 @@
                     </thead>
                     @foreach($cartItems as $cartItem)
                     <tr class="rem">
-                        <td class="invert">{{$i = 1}}</td>
+
                         <td class="invert-image"><img src="{{asset('/resources/upload/'.$cartItem->options->image)}}" alt=" " class="img-responsive" /></td>
                         {{--{{dd($cartItem->options->image)}}--}}
                         {{--{{dd($cartItem->image)}}--}}
@@ -53,7 +53,7 @@
 
                         </td>
                     </tr>
-                        {{$i ++}}
+
                     @endforeach
                     <!--quantity-->
                     <script>
