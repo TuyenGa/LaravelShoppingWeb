@@ -29,7 +29,7 @@
                             <h4 class="m-sing">{{$products->pricesale}} <span>{{$products -> price}}</span></h4>
                         </div>
                         <div class="snipcart-details agileinfo_single_right_details">
-                            <form action="{{route('site.product.addToCart',['id' => $products->id])}}" method="post">
+                            <form action="/product/detail/{{$products->id}}" method="post">
                                 <fieldset>
                                     <input type="hidden" name="cmd" value="_cart">
                                     <input type="hidden" name="add" value="1">
