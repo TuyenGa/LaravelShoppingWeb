@@ -53,9 +53,10 @@
                     <div class="clearfix"> </div>
                 </div>
             </div>
-            @foreach($products as $product)
+
             <div class="agile_top_brands_grids">
-                <div class="col-md-4 top_brand_left">
+                @foreach($products as $product)
+                <div class="col-md-4 gallery">
                     <div class="hover14 column">
                         <div class="agile_top_brand_left_grid">
                             <div class="agile_top_brand_left_grid_pos">
@@ -81,8 +82,10 @@
                     </div>
                 </div>
 
+                @endforeach
+                    <div class="clearfix"></div>
             </div>
-            @endforeach
+
             <nav class="numbering">
                 <ul class="pagination paging">
                     <li>
