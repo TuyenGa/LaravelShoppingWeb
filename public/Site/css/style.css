@@ -357,6 +357,8 @@ ul.multi-column-dropdown h6 {
 }
 .agile_top_brand_left_grid1{
 	padding:1em;
+    height:457px;
+    margin-bottom: 3px;
 }
 .agile_top_brand_left_grid1 img{
 	margin:0 auto;
@@ -2823,8 +2825,7 @@ ul.faq {
     padding: 1em 0;
 }
 .top_brand_left {
-    width: 353px;
-    height: 457px;
+    width: 100%;
     margin-bottom: 3px;
     margin-top: 3px;
 
