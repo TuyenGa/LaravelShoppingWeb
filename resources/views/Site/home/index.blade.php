@@ -31,7 +31,11 @@
                                                     <div class="snipcart-item block" >
                                                         <div class="snipcart-thumb">
                                                             <a href="/product/detail/{{$product->id}}"><img title=" " alt=" " src="/resources/upload/{{$product->image}}" /></a>
-                                                            <p>{{$product->name}}</p>a"snipcart-details top_brand_home_details">
+                                                            <p>{{$product->name}}</p>
+
+                                                            <h4>{{$product->pricesale}}<span>{{$product->price}}</span></h4>
+                                                        </div>
+                                                        <div class="snipcart-details top_brand_home_detailsg">
                                                             <a href="{{route('cart.edit',$product->id)}} " class="btn btn-primary">
                                                                 Add to cart
                                                             </a>
