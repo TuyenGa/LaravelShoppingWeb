@@ -81,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
         </div>
         <div class="product_list_header">
-            <a href="{{route('cart.index')}}" class="Button w3view-cart"> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+            <a href="{{route('cart.index')}}" class="Button w3view-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
         <span class="alert badge ">
             {{\Gloudemans\Shoppingcart\Facades\Cart::count()}}

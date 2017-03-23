@@ -38,20 +38,22 @@
                 <div class="col-md-4 gallery">
                     <div class="hover14 column">
                         <div class="agile_top_brand_left_grid">
-                            <div class="agile_top_brand_left_grid_pos">
-                                <img src="/site/images/offer.png" alt=" " class="img-responsive">
+                            <div class="agile_top_brand_left_grid_pos" >
+                                <img  src="/site/images/offer.png" alt=" " class="img-responsive">
                             </div>
                             <div class="agile_top_brand_left_grid1">
                                 <figure>
                                     <div class="snipcart-item block">
                                         <div class="snipcart-thumb">
-                                            <a href="/product/detail"><img title=" " alt=" " src="/resources/upload/{{$product->image}}"></a>
-                                            <p>Sampann-toor-dal</p>
+
+                                            <a href="/product/detail" ><img title=" " alt=" " src="/resources/upload/{{$product->image}}"></a>
+
+                                                <p>Sampann-toor-dal</p>
                                             <h4>{{$product->pricesale}}<span>{{$product->price}}</span></h4>
                                         </div>
                                         <div class="snipcart-details top_brand_home_details">
                                             <a href="{{route('cart.edit',$product->id)}}">
-                                                Add to cart
+                                                Thêm vào giỏ
                                             </a>
                                         </div>
                                     </div>
