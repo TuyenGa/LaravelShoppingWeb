@@ -13,7 +13,7 @@
     <!-- checkout -->
     <div class="checkout">
         <div class="container">
-            <h2>Your shopping cart contains: <span>3 Products</span></h2>
+            <h2>Your shopping cart contains: <span> {{$cartItems->count()}} products</span></h2>
             <div class="checkout-right">
                 <table class="timetable_sub">
                     <thead>

@@ -71,3 +71,4 @@ Route::group(['prefix'=>'admin'],function ()
    Route::resource("/category", 'Admin\CategoryController' );
    Route::resource("/product", 'Admin\ProductController' );
 });
+Route::get('search','HomeController@search');
