@@ -17,7 +17,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
        
         $products =product::all();
@@ -42,9 +42,6 @@ class ProductController extends Controller
             ->with('products',$products);
     }
 
-    public function CartShopping()
-    {
 
-    }
 
 }
