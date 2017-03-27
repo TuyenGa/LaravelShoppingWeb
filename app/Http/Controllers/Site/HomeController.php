@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 class HomeController extends Controller
 {
@@ -65,6 +66,17 @@ class HomeController extends Controller
         }
 
         return redirect()->action('Site\HomeController@getregister')->with("messages",["error" => ["lỗi không thể thêm tài khoản"]]);
+    }
+
+    public function Search(Request $request)
+    {
+      $search = $request->get('search');
+
+      if($search)
+      {
+          $products = Product::search($search)->get();
+          return view('site.home.index')->with(['products'=>$products]);
+      }
     }
 
 

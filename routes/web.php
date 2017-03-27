@@ -61,6 +61,10 @@ Route::get('/product','Site\ProductController@getproduct');
 Route::post('/product' ,['as'=>'site.product.index','uses'=> 'Site\ProductController@postproduct' ]);
 
 Route::get('/product/detail/{id}','Site\ProductController@details');
+Route::get('/product',[
+    'as'=>'search',
+    'uses'=>'Site\HomeController@Search'
+]);
 
 Route::get('/product/show','Site\ProductController@show');
 
@@ -71,6 +75,9 @@ Route::group(['prefix'=>'admin'],function ()
    Route::resource("/category", 'Admin\CategoryController' );
    Route::resource("/product", 'Admin\ProductController' );
 });
+<<<<<<< HEAD
 Route::get('search','HomeController@search');
 Route::get('loai_sp/{id}/{tenloai}',['as'=>'loaisanpham','uses'=>'HomeController@loaisanpham']);
 Route::get('xoa-san-pham/{id}',['as'=>'xoasanpham','uses'=>'Site\CartsController@xoasanpham']);
+=======
+>>>>>>> e5c6d5b101d21d2f7efd4676e778eaa72a500530
