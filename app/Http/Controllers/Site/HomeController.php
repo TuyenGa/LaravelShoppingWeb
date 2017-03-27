@@ -11,6 +11,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -74,7 +75,8 @@ class HomeController extends Controller
 
       if($search)
       {
-          $products = Product::search($search)->get();
+          $product = DB::table('products');
+          $products = $product->where('name','LIKE','%'.$search.'%')->get();
           return view('site.home.index')->with(['products'=>$products]);
       }
     }

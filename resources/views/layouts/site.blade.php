@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="w3l_search">
             <form action="{{route('search')}}" method="get">
-                <input type="search" name="search" placeholder="Tìm Kiếm..." required="">
+                <input type="search" name="search" placeholder="Tìm Kiếm..." value="{{old('search')}}" required="">
                 <button type="submit" class="btn btn-default search" aria-label="Left Align">
                     <i class="fa fa-search" aria-hidden="true"> </i>
                 </button>
