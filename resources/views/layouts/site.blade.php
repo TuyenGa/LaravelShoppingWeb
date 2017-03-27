@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h1><a href="/">THẾ GIỚI SÁCH</a></h1>
         </div>
         <div class="w3l_search">
-            <form action="/products" method="get">
+            <form action="{{route('search')}}" method="get">
                 <input type="search" name="search" placeholder="Tìm Kiếm..." required="">
                 <button type="submit" class="btn btn-default search" aria-label="Left Align">
                     <i class="fa fa-search" aria-hidden="true"> </i>

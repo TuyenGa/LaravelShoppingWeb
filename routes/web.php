@@ -61,6 +61,10 @@ Route::get('/product','Site\ProductController@getproduct');
 Route::post('/product' ,['as'=>'site.product.index','uses'=> 'Site\ProductController@postproduct' ]);
 
 Route::get('/product/detail/{id}','Site\ProductController@details');
+Route::get('/product',[
+    'as'=>'search',
+    'uses'=>'Site\HomeController@Search'
+]);
 
 Route::get('/product/show','Site\ProductController@show');
 
@@ -71,4 +75,3 @@ Route::group(['prefix'=>'admin'],function ()
    Route::resource("/category", 'Admin\CategoryController' );
    Route::resource("/product", 'Admin\ProductController' );
 });
-Route::get('search','HomeController@search');

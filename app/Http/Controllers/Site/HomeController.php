@@ -68,5 +68,16 @@ class HomeController extends Controller
         return redirect()->action('Site\HomeController@getregister')->with("messages",["error" => ["lỗi không thể thêm tài khoản"]]);
     }
 
+    public function Search(Request $request)
+    {
+      $search = $request->get('search');
+
+      if($search)
+      {
+          $products = Product::search($search)->get();
+          return view('site.home.index')->with(['products'=>$products]);
+      }
+    }
+
 
 }
