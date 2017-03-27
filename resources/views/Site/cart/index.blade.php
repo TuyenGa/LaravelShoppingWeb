@@ -47,7 +47,7 @@
                         <td class="invert">{{$cartItem->price}}</td>
                         <td class="invert">
                             <div class="minicart-details-remove">
-                                <button type="button" class="minicart-remove" data-minicart-idx="0">×</button>
+                                <button type="button" class="minicart-remove" data-minicart-idx="0">x{{\Gloudemans\Shoppingcart\Facades\Cart::remove($cartItem->rowId)}}</button>
 
                             </div>
                             <div class="rem">

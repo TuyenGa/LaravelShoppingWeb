@@ -76,7 +76,8 @@ class HomeController extends Controller
       if($search)
       {
           $product = DB::table('products');
-          $products = $product->where('name','LIKE','%'.$search.'%')->get();
+          $products = $product->where('name','LIKE','%'.$search.'%')
+                    ->orwhere('description','Like' ,'%'.$search.'%')->get();
           return view('site.home.index')->with(['products'=>$products]);
       }
     }

@@ -52,7 +52,7 @@
                                             <h4>{{$product->pricesale}}<span>{{$product->price}}</span></h4>
                                         </div>
                                         <div class="snipcart-details top_brand_home_details">
-                                            <a href="{{route('cart.edit',$product->id)}}">
+                                            <a href="{{route('cart.edit',$product->id)}}"  class="btn btn-primary">
                                                 Thêm vào giỏ
                                             </a>
                                         </div>
