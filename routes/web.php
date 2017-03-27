@@ -76,7 +76,11 @@ Route::group(['prefix'=>'admin'],function ()
    Route::resource("/product", 'Admin\ProductController' );
 });
 
+<<<<<<< HEAD
 Route::get('search','HomeController@search');
+=======
+
+>>>>>>> 861119f44b80fbc8f6d63d15201f25ea6e32d92a
 Route::get('loai_sp/{id}/{tenloai}',['as'=>'loaisanpham','uses'=>'HomeController@loaisanpham']);
 Route::get('xoa-san-pham/{id}',['as'=>'xoasanpham','uses'=>'Site\CartsController@xoasanpham']);
 
