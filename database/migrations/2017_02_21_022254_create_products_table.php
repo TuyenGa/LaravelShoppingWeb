@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->longText('content');
             $table->string('image');
             $table->string('keyword');
-            $table->string("company");
+            $table->string('company');
             $table->string('description');
             $table->integer('cate_id')->unsigned();
             $table->foreign('cate_id')->references('id')->on('categories')->onDelete('cascade');

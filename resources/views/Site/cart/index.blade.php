@@ -13,7 +13,7 @@
     <!-- checkout -->
     <div class="checkout">
         <div class="container">
-            <h2>Your shopping cart contains: <span> {{$cartItems->count()}} products</span></h2>
+            <h2>Your shopping cart contains: <span> {!! $cartItems->count() !!} products</span></h2>
             <div class="checkout-right">
                 <table class="timetable_sub">
                     <thead>
@@ -46,6 +46,10 @@
 
                         <td class="invert">{{$cartItem->price}}</td>
                         <td class="invert">
+                            <div class="minicart-details-remove">
+                                <button type="button" class="minicart-remove" data-minicart-idx="0">×</button>
+
+                            </div>
                             <div class="rem">
                                 <div class="close">
                                 </div>

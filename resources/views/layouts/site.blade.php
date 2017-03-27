@@ -81,11 +81,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
         </div>
         <div class="product_list_header">
-            <a href="{{route('cart.index')}}" class="Button w3view-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a href="{{route('cart.index')}}" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng ({{\Gloudemans\Shoppingcart\Facades\Cart::count()}})</a>
+
+
         </div>
-        <span class="alert badge ">
-            {{\Gloudemans\Shoppingcart\Facades\Cart::count()}}
-        </span>
+
     </div>
 </div>
 
@@ -106,8 +106,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <button type="submit" class="btn btn-default search" aria-label="Left Align">
                     <i class="fa fa-search" aria-hidden="true"> </i>
                 </button>
-                <div class="clearfix"></div>
-            </form>
         </div>
 
         <div class="clearfix"> </div>
@@ -129,48 +127,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html" class="act">Trang Chủ</a></li>
-                    <!-- Mega Menu -->
+                    <li class="active"><a href="{!! url('/') !!}" class="act">Trang Chủ</a></li>
+
+
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể Loại<b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="multi-gd-img">
                                     <ul class="multi-column-dropdown">
-                                        <h6>All Groceries</h6>
-                                        <li><a href="groceries.html">Dals & Pulses</a></li>
-                                        <li><a href="groceries.html">Almonds</a></li>
-                                        <li><a href="groceries.html">Cashews</a></li>
-                                        <li><a href="groceries.html">Dry Fruit</a></li>
-                                        <li><a href="groceries.html"> Mukhwas </a></li>
-                                        <li><a href="groceries.html">Rice & Rice Products</a></li>
+
+
+                                    <?php
+                                        $menu_level_2=DB::table('categories')->get();
+                                        ?>
+                                        @foreach($menu_level_2 as $item2)
+                                            <li><a href="{!! url('loai_sp',[$item2->id,$item2->name]) !!}">{!!  $item2->name!!}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
-
                             </div>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Household<b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-column columns-3">
-                            <div class="row">
-                                <div class="multi-gd-img">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>All Household</h6>
-                                        <li><a href="household.html">Cookware</a></li>
-                                        <li><a href="household.html">Dust Pans</a></li>
-                                        <li><a href="household.html">Scrubbers</a></li>
-                                        <li><a href="household.html">Dust Cloth</a></li>
-                                        <li><a href="household.html"> Mops </a></li>
-                                        <li><a href="household.html">Kitchenware</a></li>
-                                    </ul>
-                                </div>
+                            </ul>
+                        </li>
+                </li>
 
-
-                            </div>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Tin Tức</a></li>
                 </ul>
             </div>
         </nav>
@@ -178,6 +159,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 
 <!-- //navigation -->
+
 <!-- main-slider -->
     @yield('content')
 <!-- //main-slider -->

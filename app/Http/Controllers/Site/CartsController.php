@@ -18,7 +18,8 @@ class CartsController extends Controller
     {
         $total = Cart::total();
         $cartItems = Cart::content();
-        return view('site.cart.index',compact('cartItems'),compact('product','total'));
+        //$count= Cart::count();
+        return view('site.cart.index',compact('cartItems','total'));
     }
 
     /**
@@ -43,23 +44,13 @@ class CartsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
 
@@ -84,7 +75,7 @@ class CartsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -96,5 +87,10 @@ class CartsController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function xoasanpham($id){
+Cart::remove($id);
+return view('Site.cart.index');
+//return redirect()->route('index');
     }
 }

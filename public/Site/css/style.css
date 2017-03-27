@@ -23,6 +23,7 @@ h1,h2,h3,h4,h5,h6,a{
 ul,label{
 	margin:0;
 	padding:0;
+    margin-right: -300px;
 }
 body a:hover{
 	text-decoration:none;
@@ -74,6 +75,7 @@ input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input
 .agileits_header {
     background: #333333;
     padding: 12px 0;
+    height: 75px;
 }
 .w3l_offers {
     float: left;
@@ -87,6 +89,7 @@ input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input
 .w3l_offers p a {
     color: #fe9126;
     text-decoration: none;
+    font-size: 26px;
 }
 .w3l_search {
     float: right;
@@ -130,10 +133,12 @@ button.btn.btn-default.search:hover {
     width: 40%;
     text-align: center;
     padding: 9px 0;
+    margin-top: 3px;
 }
 .agile-login ul li {
     display: inline-block;
     padding: 0em 1em;
+    font-size: 17px;
 }
 .agile-login ul li a {
     font-size: 1em;
@@ -389,6 +394,7 @@ ul.multi-column-dropdown h6 {
 /*-- cart --*/
 .product_list_header {
     float: right;
+    margin-top: 15px;
 }
 .snipcart-details {
     text-align: center;
@@ -546,9 +552,11 @@ div#myTabContent {
     color: #FFF;
     background: #fe9126;
 	border:  0px solid transparent;
+    width: 1138px;
 }
 .nav-tabs {
     border-bottom: 1px solid #fff;
+
 }
 .grid_3.grid_5 {
     margin-top: 5em;
@@ -2529,6 +2537,7 @@ h3.w3_agile_header, h2.w3_agile_header {
 }
 .agileits_header {
     padding: 12px 0 8px;
+    height: 60px;
 }
 .w3ls_logo_products_left h1 a {
     font-size: 30px;

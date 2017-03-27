@@ -9,17 +9,13 @@
             <div class="grid_3 grid_5">
                 <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                     <ul id="myTab" class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Advertised offers</a></li>
-                        <li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Today Offers</a></li>
+                        <li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Danh Sách Sản Phẩm</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
-                            <div class="agile-tp">
-                                <h5>Advertised this week</h5>
-                                <p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
-                            </div>
+
                             <div class="agile_top_brands_grids">
-                                @forelse($products as $product)
+                                @forelse($results as $product)
                                     <div class="col-md-4 top_brand_left">
                                         <div class="hover14 column">
                                             <div class="agile_top_brand_left_grid">
