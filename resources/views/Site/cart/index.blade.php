@@ -47,7 +47,7 @@
                         <td class="invert">{{$cartItem->price}}</td>
                         <td class="invert">
                             <div class="minicart-details-remove">
-                                <button type="button" class="minicart-remove" data-minicart-idx="0">x{{\Gloudemans\Shoppingcart\Facades\Cart::remove($cartItem->rowId)}}</button>
+                                <button type="button" name="remove" class="minicart-remove" data-minicart-idx="0">x{{\Gloudemans\Shoppingcart\Facades\Cart::remove($cartItem->rowId)}}</button>
 
                             </div>
                             <div class="rem">
@@ -60,7 +60,11 @@
 
                     @endforeach
                     <!--quantity-->
+
                     <script>
+                        $('.minicart-remove').on('click',function () {
+                            
+                        });
                         $('.value-plus').on('click', function(){
                             var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
                             divUpd.text(newVal);
