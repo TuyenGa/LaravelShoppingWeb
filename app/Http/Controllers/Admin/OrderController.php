@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
+use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,9 +16,10 @@ class OrderController extends Controller
      */
     public function index(Request $request)
     {
+        $categories = Category::all();
         $part = $request->get("part",30);
-        $orders = order::paginate($part);
-        return view('admin.category.index')->with("orders",$orders);
+        $orders = Order::paginate($part);
+        return view('admin.category.index')->with("orders",$orders)->with('categories',$categories);
     }
 
     /**
