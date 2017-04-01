@@ -26,8 +26,14 @@ class User extends Authenticatable
         return $this->hasMany('App\Product');
 
     }
-    public function tintuc(){
-        return $this->hasMany('App\Tintuc');
 
+
+    public function isAdmin()
+    {
+
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }

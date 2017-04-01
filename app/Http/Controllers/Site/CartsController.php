@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Product;
+use App\Shipping;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,10 +16,9 @@ class CartsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  $cartItems = Cart::content();
         $total = Cart::total();
-        $cartItems = Cart::content();
-        //$count= Cart::count();
+//        $count = Cart::count();
         return view('site.cart.index',compact('cartItems','total'));
     }
 
@@ -27,9 +27,15 @@ class CartsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getShipping()
     {
+        return view('site.shipping');
 
+    }
+    public function postShipping(Request $request)
+    {
+        $shipping = Shipping::create($request->all());
+        return redirect()->back()->with('shipping' ,$shipping);
 
     }
 
@@ -89,8 +95,8 @@ class CartsController extends Controller
         //
     }
     public function xoasanpham($id){
-Cart::remove($id);
-return view('Site.cart.index');
+        Cart::remove($id);
+        return view('Site.cart.index');
 //return redirect()->route('index');
     }
 }

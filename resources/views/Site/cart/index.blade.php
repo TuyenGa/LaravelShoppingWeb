@@ -14,7 +14,7 @@
     <div class="checkout">
         <div class="container">
             <h2>Your shopping cart contains: <span> {!! $cartItems->count() !!} products</span></h2>
-            <div class="checkout-right">
+            <div class="checkout-right">    
                 <table class="timetable_sub">
                     <thead>
                     <tr>
@@ -47,9 +47,9 @@
                         <td class="invert">{{$cartItem->price}}</td>
                         <td class="invert">
                             <div class="minicart-details-remove">
-                                <button type="button" name="remove" id="minicart-remove" data-minicart-idx="0">x{{\Gloudemans\Shoppingcart\Facades\Cart::remove($cartItem->rowId)}}</button>
+                                <button type="button" name="remove" id="minicart-remove" class="btn btn-danger" data-minicart-idx="0">Remove{{\Gloudemans\Shoppingcart\Facades\Cart::remove($cartItem->rowId)}}</button>
 
-                            </div>
+                                </div>
                             <div class="rem">
                                 <div class="close">
                                 </div>
@@ -88,7 +88,9 @@
                         <li>Total <i>-</i> <span>{{$total}}</span></li>
 
                     </ul>
+                    <p><a href=""  class="btn btn-success">Thanh Toán</a></p>
                 </div>
+
                 <div class="checkout-right-basket">
                     <a href="{{route('site.home.index')}}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
                 </div>

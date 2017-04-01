@@ -6,18 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $fillable = [""];
+    protected $table = 'orders';
+    protected $fillable = [
+        'status',
+        'total_qty',
+        'total_price'
+    ];
 
-    public function category(){
-        return $this->belongsTo('App\Category');
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
-    public function user(){
-        return $this->belongsTo('App\User');
+    public function detailOrder()
+    {
+        return $this->hasMany(DetailOrder::class);
     }
 
-    public function pimages(){
-        return $this->hasMany('App\ProductImage');
-    }
+
 
 }

@@ -41,7 +41,7 @@
                                         <button type="submit" class="btn btn-danger"> Delete </button>
                                     </form>
                                 </td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{ url("/admin/product/").'/'.$item->id ."/edit" }}">Edit</a></td>
+                                <td class="center"><i class="fa fa-pencil fa-fw "></i> <a href="{{ url("/admin/product/").'/'.$item->id ."/edit" }}" class="btn btn-primary">Edit</a></td>
                             </tr>
                         @endforeach
                         </tbody>

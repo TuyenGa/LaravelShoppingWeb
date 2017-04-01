@@ -20,9 +20,8 @@ class CreateChitiethoadonsTable extends Migration
             $table->foreign('id_order')->references('id')->on('orders')->onDelete('cascade');
             $table->integer('id_product')->unsigned();
             $table->foreign('id_product')->references('id')->on('products')->onDelete('cascade');
-            $table->integer('soluong');
-            $table->integer('giasp');
-            $table->integer('tong_giasp');
+            $table->integer('qty');
+            $table->float('total');
             $table->timestamps();
         });
     }

@@ -53,6 +53,20 @@ Route::get('/list','Site\CategoryController@index');//getlist = index
 // Cart
 Route::resource('/cart','Site\CartsController');
 
+Route::get('/cart',[
+    'as'=> 'cart.index',
+    'uses'=> 'Site\CartsController@index'
+]);
+
+Route::get('shipping',[
+   'as' => 'cart.shipping',
+    'uses' => 'Site\CartsController@getShipping'
+]);
+Route::post('/shipping',[
+    'as'=> 'post.shipping',
+    'uses'=> 'Site\CartsController@postSHipping'
+]);
+
 //Site/product
 Route::resource('products','Site\ProductController');
 
@@ -74,7 +88,7 @@ Route::group(['prefix'=>'admin'],function ()
    Route::resource("/user", 'Admin\UserController' );
    Route::resource("/category", 'Admin\CategoryController' );
    Route::resource("/product", 'Admin\ProductController' );
-   Route::resource("/order",'Admin\OrderController');
+   Route::resource("/order",'Admin\OrdersController');
 });
 
 

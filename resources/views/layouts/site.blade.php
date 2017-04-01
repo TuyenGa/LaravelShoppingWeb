@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="agileits_header">
     <div class="container">
         <div class="w3l_offers">
-            <p><a href="/product/show">Book Store</a></p>
+            <p><a href="/">Book Store</a></p>
         </div>
         <div class="agile-login">
             <ul>

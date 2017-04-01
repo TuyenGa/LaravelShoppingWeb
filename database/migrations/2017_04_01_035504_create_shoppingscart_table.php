@@ -4,8 +4,15 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateShoppingcartTable extends Migration
+class CreateShoppingscartTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+
+
     /**
      * Run the migrations.
      */
@@ -27,4 +34,5 @@ class CreateShoppingcartTable extends Migration
     {
         Schema::drop('shoppingcart');
     }
+
 }
